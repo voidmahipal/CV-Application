@@ -28,17 +28,21 @@ export default function Education({setDisplaySchoolName,setDisplayTitleOfStudy,s
 
     return <>
         <form onSubmit={(e)=>e.preventDefault()}>
-            <div>
-                <h2>Educational Experience</h2>
-                <p>Add details about your education.</p>
+            <div className="genHeading">
+                <div>
+                    <h2>Educational Experience</h2>
+                    <p>Add details about your education.</p>
+                </div>
+                <div className="btns">
+                    <Button type="button" onClick={()=>setIsActive(false)} text="Edit" />
+                    <Button type="submit" onClick={handleSubmit} text="Submit" />
+                </div>
             </div>
-            <div>
-                <Button type="button" onClick={()=>setIsActive(false)} text="Edit" />
-                <Button type="submit" onClick={handleSubmit} text="Submit" />
+            <div className="takeInput">
+                <Input labelFor="schoolName" labelText="School Name" type="text" name="schoolName" id="schoolName" value={schoolName} handleChange={(e)=>setSchoolName(e.target.value)} isActive={isActive} placeholder="Standford University" />
+                <Input labelFor="titleOfStudy" labelText="Title of Study" type="text" name="titleOfStudy" id="titleOfStudy" value={titleOfStudy} handleChange={(e)=>setTitleOfStudy(e.target.value)} isActive={isActive} placeholder="B.Sc. Computer Science" />
+                <Input labelFor="dateOfStudy" labelText="Date of Study" type="text" name="dateOfStudy" id="dateOfStudy" value={dateOfStudy} handleChange={(e)=>setDateOfStudy(e.target.value)} isActive={isActive} placeholder="2018-2022" />
             </div>
-            <Input labelFor="schoolName" labelText="School Name" type="text" name="schoolName" id="schoolName" value={schoolName} handleChange={(e)=>setSchoolName(e.target.value)} isActive={isActive} placeholder="Standford University" />
-            <Input labelFor="titleOfStudy" labelText="Title of Study" type="text" name="titleOfStudy" id="titleOfStudy" value={titleOfStudy} handleChange={(e)=>setTitleOfStudy(e.target.value)} isActive={isActive} placeholder="B.Sc. Computer Science" />
-            <Input labelFor="dateOfStudy" labelText="Date of Study" type="text" name="dateOfStudy" id="dateOfStudy" value={dateOfStudy} handleChange={(e)=>setDateOfStudy(e.target.value)} isActive={isActive} placeholder="2018-2022" />
         </form>
     </>
 }

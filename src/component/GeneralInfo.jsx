@@ -26,17 +26,21 @@ export default function GeneralInfo({setDisplayName,setDisplayEmail,setDisplayPh
     }
     return <>
         <form onSubmit={(e)=>e.preventDefault()}>
-            <div>
-                <h2>General Information</h2>
-                <p>Add your basic contact details.</p>
+            <div className="genHeading">
+                <div>
+                    <h2>General Information</h2>
+                    <p>Add your basic contact details.</p>
+                </div>
+                <div className="btns">
+                    <Button type="button" onClick={()=>setIsActive(false)} text="Edit" />
+                    <Button type="submit" onClick={handleSubmit} text="Submit" />
+                </div>
             </div>
-            <div>
-                <Button type="button" onClick={()=>setIsActive(false)} text="Edit" />
-                <Button type="submit" onClick={handleSubmit} text="Submit" />
+            <div className="takeInput">
+                <Input labelFor="name" labelText="Full Name" type="text" name="name" id="name" value={name} handleChange={(e)=>setName(e.target.value)} isActive={isActive} placeholder="Alex Turner" />
+                <Input labelFor="email" labelText="Email" type="email" name="email" id="email" value={email} handleChange={(e)=>setEmail(e.target.value)} isActive={isActive} placeholder="alex.turner@example.com" />
+                <Input labelFor="phoneNo" labelText="Phone Number" type="tel" name="phoneNo" id="phoneNo" value={phoneNo} handleChange={(e)=>setPhoneNo(e.target.value)} isActive={isActive} placeholder="+91 98765 453210" />
             </div>
-            <Input labelFor="name" labelText="Full Name" type="text" name="name" id="name" value={name} handleChange={(e)=>setName(e.target.value)} isActive={isActive} placeholder="Alex Turner" />
-            <Input labelFor="email" labelText="Email" type="email" name="email" id="email" value={email} handleChange={(e)=>setEmail(e.target.value)} isActive={isActive} placeholder="alex.turner@example.com" />
-            <Input labelFor="phoneNo" labelText="Phone Number" type="tel" name="phoneNo" id="phoneNo" value={phoneNo} handleChange={(e)=>setPhoneNo(e.target.value)} isActive={isActive} placeholder="+91 98765 453210" />
         </form>
     </>
 }

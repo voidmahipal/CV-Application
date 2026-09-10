@@ -1,0 +1,52 @@
+.display{
+    padding: 2rem 1rem ;
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+}
+.display>div{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.display .exp{
+    flex: 2;
+}
+.displayHeading{
+    gap: 2rem;
+}
+.displayHeading h2{
+    font-size: 4rem;
+    flex: 3;
+    color: #1A2843;
+}
+.displayHeading div{
+    display: flex;
+    flex:1;
+}
+.email{
+    width: 15rem;
+    border-right: 2px solid #C7CCD2;
+}
+.phNo{
+    margin-left: 1.7rem;
+}
+.edu h3,.exp h3{
+    font-size: 2rem;
+    color: #20242F;
+    margin-top: 1rem;
+}
+.edu div,.exp div{
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+.edu div h4,.exp div h4{
+    font-size: 1.1rem;
+}
+.edu p,.exp p{
+    color: #20242F;
+}
+hr{
+    color: #C7CCD2;
+}

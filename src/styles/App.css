@@ -1,0 +1,77 @@
+header{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+main{
+    display: flex;
+}
+main section{
+    flex: 1;
+}
+.infoInput{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.infoInput form{
+    flex: 1;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    background-color: #FEFEFE;
+    gap: 0.5rem;
+}
+.infoInput h2{
+    color: #1A2843;
+}
+.genHeading{
+    display: flex;
+    justify-content: space-between;
+}
+.genHeading .btns{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.genHeading .btns button{
+    width: 5rem;
+    height: 2rem;
+    border-radius: 0.7rem;
+    border: none;
+}
+button[type="edit"]{
+    background: #EFF2F7;
+    color: #263247;
+}
+button[type="submit"] {
+    background: #3566C3;
+    color: #FFFFFF;
+}
+.takeInput{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+}
+.takeInput div{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+.takeInput div label{
+    width: 10rem;
+    color: #20242F;
+}
+.takeInput div input{
+    width: 100%;
+    height: 1.7rem;
+    border-radius: 0.4rem;
+    border: 1px solid black;
+    padding: 0.2rem;
+    background-color: #FFFFFF;
+    color: #263247;
+}
+input::placeholder{
+    color: #7A8290;
+}
